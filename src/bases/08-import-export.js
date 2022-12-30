@@ -1,4 +1,4 @@
-import {heroes} from './data/heroes'
+import heroes from '../data/heroes'
 
 const getHeroeByID = (id)=>{
     return heroes.find((x)=>{
@@ -20,11 +20,11 @@ console.log(getHeroeByID_01(3));
 
 
 //Optimizando la busqueda 2da forma
-const getHeroeByID_02 = (id) => heroes.find(heroes=> heroes.id === id);
+export const getHeroeByID_02 = (id) => heroes.find(heroes=> heroes.id === id);
 console.log(getHeroeByID_02(5));
 
 //busqueda por owner
-const getHeroeByOwner = (owner)=>{
+export const getHeroeByOwner = (owner)=>{
     return heroes.filter(x => x.owner === owner) 
 }
 
